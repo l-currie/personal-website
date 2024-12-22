@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logoContainer {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding-right: 1rem;
+    align-items: center;
+  }
+}
