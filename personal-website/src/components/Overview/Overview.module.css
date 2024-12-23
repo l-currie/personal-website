@@ -1,8 +1,14 @@
+:root {
+  --almostBlack: #070707;
+  --greenAccent: #13c548;
+  --textColor: #ffffff;
+}
+
 @media (prefers-color-scheme: dark) {
   .container {
     display: flex;
     flex-direction: row;
-    background-color: rgb(41, 68, 48);
+    background-color: rgb(5, 7, 5);
     justify-content: center;
     aspect-ratio: 16/6;
     width: 90%;
@@ -12,11 +18,9 @@
   .leftContainer {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    justify-content: space-between;
     padding: 1rem;
-    align-items: center;
     width: 75%;
-    background-color: rgb(82, 99, 64);
   }
 
   .rightContainer {
@@ -25,14 +29,26 @@
     padding: 1rem;
     align-items: center;
     width: 25%;
-    background-color: rgb(62, 120, 128);
   }
 
   .sweText {
-    font-size: 3.5vw;
+    font-size: 2vw;
     font-weight: 700;
     color: chartreuse;
+    width: 100%;
   }
+
+  .nameText {
+    font-size: 3vw;
+    font-weight: 800;
+    color: var(--greenAccent);
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 0;
+    letter-spacing: 0.15em;
+    display: inline-block; /* Ensure width is respected */
+  }
+  
 
   .imageContainer {
     width: 100%;
@@ -41,12 +57,10 @@
     overflow: hidden;
   }
 
-  .nameText {
-    font-size: 2.25vw;
-  }
-
   .bodyText {
-    font-size: 1.6vw;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-weight: 200;
   }
 
   .buttonContainer {
@@ -56,28 +70,107 @@
     width: 100%;
   }
 
+  .linkButtonContainer {
+    width: 4vw;
+    height: 4vw;
+    background-color: var(--almostBlack);
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0 var(--greenAccent);
+    transition: ease-out 0.2s;
+  }
+
+  .linkButtonContainer:hover {
+    box-shadow: inset 5vw 0 0 0 var(--greenAccent);
+    border-color: var(--almostBlack);
+    cursor: pointer;
+  }
+
   .resumeButton {
     font-size: 2vw;
   }
 
   .resumeButton {
-    background: rgb(7, 7, 7);
-    width: 20vw;
+    background: var(--almostBlack);
+    width: 18vw;
     border-style: solid;
     border-width: 3px;
     border-color: white;
     color: rgb(255, 255, 255);
-    font-size: 2vw;
+    font-size: 1.6vw;
     font-weight: bold;
     padding: 12px 24px;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 #0cb33e;
-    transition: ease-out .2s;
+    box-shadow: inset 0 0 0 0 var(--greenAccent);
+    transition: ease-out 0.2s;
   }
-  
+
   .resumeButton:hover {
-    box-shadow: inset 20vw 0 0 0 #0cb33e;
-    color: rgb(7, 7, 7);
-    border-color: rgb(7, 7, 7);
+    box-shadow: inset 18vw 0 0 0 var(--greenAccent);
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+  }
+
+  .linkButton {
+    padding: 0.75vw;
+    transition: ease-out 0.2s;
+  }
+
+  .linkButton:hover {
+    filter: invert(0.972);
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1vw;
+  }
+
+  .nameHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .handWave {
+    padding-left: 1vw;
+    font-size: 2.5vw;
+    animation-name: handWave-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes handWave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    5% {
+      transform: rotate(15deg);
+    }
+    10% {
+      transform: rotate(-9deg);
+    }
+    15% {
+      transform: rotate(15deg);
+    }
+    20% {
+      transform: rotate(-5deg);
+    }
+    25% {
+      transform: rotate(8deg);
+    }
+    30% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
