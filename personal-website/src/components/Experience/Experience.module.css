@@ -1,0 +1,97 @@
+:root {
+  --almostBlack: rgb(3, 5, 3);
+  --greenAccent: #18d341;
+  --textColor: #ffffff;
+  --cardBackground: rgb(22, 59, 22);
+}
+
+.titleText {
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: var(--greenAccent);
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 0;
+  letter-spacing: 0.15em;
+  display: inline-block; /* Ensure width is respected */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(3, 5, 3);
+  justify-content: left;
+  aspect-ratio: 16/6;
+  gap: 1rem;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Card Styles */
+
+.cardContaienr {
+  display: flex;
+  flex-direction: row;
+  /* background-color: var(--cardBackground); */
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  /* background-color: #1b411b; */
+  align-items: end;
+  padding-right: 1vw;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  /* background-color: cadetblue; */
+}
+
+.timeStampContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: end;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+.timeStampDot {
+  /* background-color: var(--greenAccent); */
+  border: 3px solid var(--greenAccent);
+  border-radius: 50%;
+  width: 2vw;
+  height: 2vw;
+}
+
+.timeStampText {
+  font-size: 1.4vw;
+  font-weight: 300;
+  letter-spacing: 1.25;
+}
+
+.sideBar {
+  background-color: var(--greenAccent);
+  width: 3px;
+  height: calc(100% - 4vw);
+  margin: 0 calc(1vw - 1.5px);
+}
+
+.cardTitleText {
+  font-size: 2.25vw;
+  font-weight: 600;
+  color: var(--greenAccent);
+}
+
+.cardHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1vw;
+}

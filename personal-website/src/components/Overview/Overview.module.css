@@ -1,5 +1,5 @@
 :root {
-  --almostBlack: #070707;
+  --almostBlack: rgb(3, 5, 3);
   --greenAccent: #18d341;
   --textColor: #ffffff;
 }
@@ -48,7 +48,6 @@
     letter-spacing: 0.15em;
     display: inline-block; /* Ensure width is respected */
   }
-  
 
   .imageContainer {
     width: 100%;
