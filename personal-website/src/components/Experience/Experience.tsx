@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import styles from "../Experience/Experience.module.css";
 import ExperienceCard from "./ExperienceCard";
+import { CambioCard } from "./ExperienceData";
 const experienceHeaderText = "Experience";
 
 function Experience() {
@@ -32,7 +33,13 @@ function Experience() {
       >
         {experienceText}
       </div>
-      <ExperienceCard startDate="MAY 2023" endDate="SEPT 2024" cardTitle="Web Developer Co-op" subTitle="Cambio Earth Systems (BGC Engineering)" bullets={['aasdasdasdasd', 'jniasujiasdni', 'ajksasdjkasdjk', 'jkadasdjnkasdjnk']}/>
+      <ExperienceCard
+        startDate={CambioCard.startDate}
+        endDate={CambioCard.endDate}
+        cardTitle={CambioCard.cardTitle}
+        subTitle={CambioCard.subTitle}
+        bullets={CambioCard.bullets}
+      ></ExperienceCard>
     </div>
   );
 }

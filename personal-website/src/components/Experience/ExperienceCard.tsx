@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../Experience/Experience.module.css";
-import { start } from "repl";
 
 type ExperienceCardProps = {
   startDate: string;
@@ -27,12 +26,12 @@ function ExperienceCard({ startDate, endDate, cardTitle, subTitle, bullets }: Ex
       <div className={styles.rightContainer}>
         <div className={styles.cardHeaderContainer}>
           <div className={styles.cardTitleText}>{cardTitle}</div>
-          <div className={styles.timeStampText}>{subTitle}</div>
+          <div className={styles.subTitleText}>{subTitle}</div>
         </div>
-        <div>
-          {bullets.map((b, i) => {
-            return <div key={i}>{`- ${b}`}</div>;
-          })}
+        <div className={styles.bulletContainer}>
+          {bullets.map((b, i) => (
+            <div className={styles.bulletText} key={i} dangerouslySetInnerHTML={{ __html: `- ${b}` }} />
+          ))}
         </div>
       </div>
     </div>
