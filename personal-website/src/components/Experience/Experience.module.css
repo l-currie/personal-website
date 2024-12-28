@@ -6,14 +6,11 @@
 }
 
 .titleText {
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 700;
   color: var(--greenAccent);
   overflow: hidden;
-  white-space: nowrap;
-  margin: 0 0;
   letter-spacing: 0.15em;
-  display: inline-block; /* Ensure width is respected */
 }
 
 .container {
@@ -22,7 +19,7 @@
   background-color: rgb(3, 5, 3);
   justify-content: left;
   aspect-ratio: 16/6;
-  gap: 1rem;
+  gap: 2rem;
   width: 90%;
   margin: auto;
   padding: 1rem;
@@ -97,7 +94,7 @@
 }
 
 .bulletText {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-weight: 300;
   letter-spacing: 0.5;
 }
@@ -118,4 +115,26 @@
   letter-spacing: 1.25;
 }
 
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  padding: .75vw .75vw;
+  gap: 2vw
+}
 
+.skill {
+  font-size: 1.2vw;
+  font-weight: 400;
+  padding: .4vw .75vw;
+  border: 2px solid var(--greenAccent);
+  border-radius: 2vw;
+  transition: ease 0.3s;
+}
+
+.skill:hover {
+  background-color: var(--greenAccent);
+  color: var(--almostBlack);
+  border-color: var(--almostBlack);
+}

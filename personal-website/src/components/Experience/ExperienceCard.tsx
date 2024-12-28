@@ -7,9 +7,10 @@ type ExperienceCardProps = {
   cardTitle: string;
   subTitle: string;
   bullets: string[];
+  skills: string[];
 };
 
-function ExperienceCard({ startDate, endDate, cardTitle, subTitle, bullets }: ExperienceCardProps) {
+function ExperienceCard({ startDate, endDate, cardTitle, subTitle, bullets, skills}: ExperienceCardProps) {
   return (
     <div className={styles.cardContaienr}>
       <div className={styles.leftContainer}>
@@ -32,6 +33,14 @@ function ExperienceCard({ startDate, endDate, cardTitle, subTitle, bullets }: Ex
           {bullets.map((b, i) => (
             <div className={styles.bulletText} key={i} dangerouslySetInnerHTML={{ __html: `- ${b}` }} />
           ))}
+        </div>
+        <div className={styles.skillsContainer}>
+          {skills.map((s, i) => (
+            <div className={styles.skill} key={i + 100}>
+              {s}
+            </div>
+          ))}
+
         </div>
       </div>
     </div>

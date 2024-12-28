@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import styles from "../Experience/Experience.module.css";
 import ExperienceCard from "./ExperienceCard";
-import { CambioCard } from "./ExperienceData";
+import { experienceArr } from "./ExperienceData";
 const experienceHeaderText = "Experience";
 
 function Experience() {
@@ -33,13 +33,14 @@ function Experience() {
       >
         {experienceText}
       </div>
-      <ExperienceCard
-        startDate={CambioCard.startDate}
-        endDate={CambioCard.endDate}
-        cardTitle={CambioCard.cardTitle}
-        subTitle={CambioCard.subTitle}
-        bullets={CambioCard.bullets}
-      ></ExperienceCard>
+      {experienceArr.map((e, i) => (
+        <ExperienceCard startDate={e.startDate}
+        endDate={e.endDate}
+        cardTitle={e.cardTitle}
+        subTitle={e.subTitle}
+        bullets={e.bullets}
+        skills={e.skills}/>
+      ))}
     </div>
   );
 }
